@@ -1,0 +1,33 @@
+group 'com.bastian'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+//configurations.all {
+//    transitive = false
+//}
+
+project.allprojects { project ->
+    apply plugin: 'java'
+    dependencies {
+
+        //@Slf4j
+    }
+    configurations.all {
+        exclude group: 'moduleA'
+//        exclude group: 'log4j', module: 'log4j'
+//        exclude group: 'org.codehaus.jackson', module: 'jackson-core-asl'
+//        exclude group: 'org.codehaus.jackson', module: 'jackson-mapper-asl'
+//        exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

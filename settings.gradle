@@ -1,0 +1,6 @@
+rootProject.name = 'gradle'
+include 'moduleA'
+include 'moduleB'
+include 'moduleC'
+//include 'moduleD'
+
